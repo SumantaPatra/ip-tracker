@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ip tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script type="module" async defer src="./index.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="img-section">
+        <img class="bg-image" src="/bg-image.jpeg" alt="background image" />
+      </section>
+      <section class="form-section">
+        <h1 class="text-heading">Ip Adress Tracker</h1>
+        <form class="form" action="">
+          <input
+            class="input-field"
+            id="input-field"
+            required
+            placeholder="Search for any IP Adress or domain"
+            name="input-vale"
+            type="text"
+          />
+          <button class="btn" id="btn" type="submit">
+            <img class="btn-image" src="/right.png" alt="button-icon" />
+            <!-- submit -->
+          </button>
+        </form>
+      </section>
+      <section id="result" class="result-section">
+        <article class="result-article">
+          <h2 class="result-header">Ip Adress</h2>
+          <p id="ip-val" class="result-para">--</p>
+        </article>
+        <article class="result-article">
+          <h2 class="result-header">Region</h2>
+          <p id="region-val" class="result-para">--</p>
+        </article>
+        <article class="result-article">
+          <h2 class="result-header">Country</h2>
+          <p id="country-val" class="result-para">--</p>
+        </article>
+        <article style="padding: 10px">
+          <h2 class="result-header">Isp</h2>
+          <p id="isp-val" class="result-para">--</p>
+        </article>
+      </section>
+      <section class="map-section">
+        <div id="map"></div>
+      </section>
+    </main>
+  </body>
+</html>
